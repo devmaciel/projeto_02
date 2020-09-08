@@ -4,5 +4,7 @@
         "storage": true,
         "tests": true,
         "vendor": true
-    }
+    },
+    "intelephense.diagnostics.undefinedSymbols": false,
+    "intelephense.diagnostics.undefinedTypes": false
 }
