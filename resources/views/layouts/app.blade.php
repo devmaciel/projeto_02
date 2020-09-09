@@ -19,12 +19,12 @@
   {{-- header --}}
   @include('templates.header')
 
-    <div class="container">
+    {{-- <div class="container"> --}}
 
       {{-- conteúdo --}}
       @yield('conteudo')
 
-    </div>
+    {{-- </div> --}}
 
 
     <!-- BOOTSTRAP (frontend framework) -->
