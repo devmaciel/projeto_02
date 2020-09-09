@@ -23,6 +23,22 @@
             <input type="text" class="form-control" placeholder="Buscar">
         </li>
 
+        <li>
+
+            <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Sua Lista</a>
+                    <a class="dropdown-item" href="#">Editar Perfil</a>
+                    <a class="dropdown-item" href="#">Sair</a>
+                </div>
+            </div>
+
+            <div class="img-wraper"><img src="{{ asset('images/edith.jpg') }}" alt="Imagem do Usuário"></div>
+            <p>João Pedro Maciel</p>
+
+        </li>
+
     </ul>
 </header>
 
