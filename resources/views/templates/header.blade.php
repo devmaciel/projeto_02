@@ -1,5 +1,5 @@
 <header>
-    <ul class="nav">
+    <ul class="nav nav-desktop">
         <a href="" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
 
         <li class="nav-item">
@@ -40,5 +40,24 @@
         </li>
 
     </ul>
+
+
+    <div class="mobile-menu-wrapper">
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#servicos">Séries</a></li>
+                <li><a href="#sobre">Filmes</a></li>
+                <li><a href="#contato">Infantil</a></li>
+                <li><a href="#contato">Sua Lista</a></li>
+                <li><a href="#contato">Editar Perfil</a></li>
+                <li><a href="#contato">Sair</a></li>
+                <li><a></a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="clear"></div><!--clear-->
+
 </header>
 

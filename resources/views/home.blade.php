@@ -28,7 +28,7 @@
 
     {{-- CAROUSELS --}}
     <section class="vitrine">
-        <h3 class="carousel-title">Séries <b>jaoflix</b> exclusivas</h3>
+        <h3 class="carousel-title">Filmes e Séries <b>jaoflix</b> exclusivas</h3>
 		<div class="vitrine-flex">
 			<div class="vitrine-single-banner">
 				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>

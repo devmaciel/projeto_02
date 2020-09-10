@@ -15,6 +15,7 @@ html,body{
     scroll-behavior: smooth;
     overflow-x: hidden;
     background:black !important;
+    height: 100%;
 }
 
 header{
@@ -22,6 +23,55 @@ header{
 }
 
 .clearfix{clear: both;}
+
+
+.mobile-menu-wrapper{
+    position: relative;
+    top:-50px;
+}
+
+nav.mobile-menu{
+    display: none;
+	cursor: pointer;
+	display: none;
+	width: 32px;
+	height: 32px;
+	background-image: url('../images/menu.png');
+    background-size: 100% 100%;
+    float: right;
+}
+
+nav.mobile-menu ul{
+    z-index: 999;
+	display: none;
+	/*transition: 1s;*/
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	list-style-type: none;
+    text-align: center;
+    top: 50px;
+}
+
+nav.mobile-menu ul li{
+    position: relative;
+    z-index: 999;
+	padding: 8px 0;
+	transition: 0.4s;
+	border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+	background-color: rgb(230,230,230);
+}
+
+nav.mobile-menu ul li a{
+    position: relative;
+    z-index: 999;
+	color: black;
+	text-decoration: none;
+}
 
 /* HEADER */
 .img-logo{
