@@ -26,8 +26,144 @@
     </section>
 
 
-
     {{-- CAROUSELS --}}
+    <section class="vitrine">
+        <h3 class="carousel-title">Séries <b>jaoflix</b> exclusivas</h3>
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+            </div>
+            <div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+            </div>
+            <div class="clearfix"></div>
+	    </div>	<!--vitrine-flex-->
+    </section>
+
+    <section class="vitrine">
+        <h3 class="carousel-title">Filmes</h3>
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+				<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+            <div class="clearfix"></div>
+	    </div>	<!--vitrine-flex-->
+    </section>
+
+    <section class="vitrine">
+        <h3 class="carousel-title">Séries</h3>
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+            </div>
+            <div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+            </div>
+            <div class="clearfix"></div>
+	    </div>	<!--vitrine-flex-->
+    </section>
+
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+
+    <script>
+		$('.vitrine-flex').slick({
+            dots: false,
+            arrows:false,
+            infinite: false,
+            centerMode: false,
+            speed:1000,
+            slidesToShow: 5,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            pauseOnHover:false,
+            responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+	    });
+
+		$('.vitrine-wraper').hover(function(){
+			$(this).css('z-index','1000');
+		})
+
+		$('.vitrine-wraper').mouseout(function(){
+			$(this).css('z-index','0');
+        })
+
+	</script>
 
 
 @endsection
