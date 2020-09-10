@@ -15,4 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 
 //INDEX
-Route::get('/', 'homeController@home')->name('home');
+Route::get('/', 'homeController@index')->name('index');
+
+//------------------------------------------------------
+// Usuário - Login
+Route::get('/login', 'homeController@pgLogin')
+ ->name('usuario_form_login');
+
+Route::post('/efetuar-login', 'homeController@executarLogin')
+->name('usuario_form_executar-login');
+
+//---------------------------------------------------------
+// Usuário - Logout
+Route::get('usuario_logout', 'homeController@logout')
+    ->name('logout');

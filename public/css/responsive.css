@@ -1,13 +1,9 @@
 @media screen and (max-width: 1080px){
 
-    header{
-
-    }
-
     nav.mobile-menu{
         display: inline-block;
         margin: 20px;
-        margin-top: -4px;
+        margin-top: 7px;
     }
 
     header li:last-child{
@@ -16,10 +12,11 @@
 
     .nav-desktop li:nth-of-type(5){
         margin-right: 50px;
+        margin-top: 7px;
     }
 }
 
-@media screen and (max-width: 865px){
+@media screen and (max-width: 920px){
     .nav-desktop li:nth-of-type(1n){
         display: none;
     }
@@ -31,12 +28,12 @@
 
 }
 
-@media screen and (max-width: 565px){
+/* @media screen and (max-width: 565px){
 
     .nav-desktop li:nth-of-type(5){
         display: none;
     }
-}
+} */
 
 @media screen and (max-width: 514px){
 

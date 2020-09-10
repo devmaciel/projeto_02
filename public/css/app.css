@@ -18,6 +18,18 @@ html,body{
     height: 100%;
 }
 
+body::-webkit-scrollbar {
+    width: 0.25rem;
+    }
+
+    body::-webkit-scrollbar-track {
+    background: #1e1e24;
+    }
+
+    body::-webkit-scrollbar-thumb {
+    background: #E50914;
+    }
+
 header{
     background-color:rgb(2, 3, 3);
 }
@@ -88,6 +100,7 @@ nav.mobile-menu ul li a{
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 .nav li a{

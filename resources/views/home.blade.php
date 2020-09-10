@@ -1,3 +1,4 @@
+@include('templates/headerLogado')
 @extends('layouts.app')
 
 @section('conteudo')
@@ -5,7 +6,7 @@
     {{-- BANNER --}}
     <section class="banner">
 
-        <video autoplay muted id="video-destaque">
+        <video autoplay loop muted id="video-destaque">
             <source src="{{ asset('videos/kh3trailerSHORT720.mp4') }}" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>

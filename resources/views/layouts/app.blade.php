@@ -18,7 +18,7 @@
   <body>
 
   {{-- header --}}
-  @include('templates.header')
+  {{-- @include('templates.headerLogado') --}}
 
     {{-- <div class="container"> --}}
 
