@@ -30,7 +30,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Sua Lista</a>
                     <a class="dropdown-item" href="#">Editar Perfil</a>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <a class="dropdown-item" href="{{ asset('usuario_logout') }}">Sair</a>
                 </div>
             </div>
 
