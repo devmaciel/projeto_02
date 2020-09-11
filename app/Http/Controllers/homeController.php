@@ -71,6 +71,12 @@ class homeController extends Controller
         Session::put('login', 'sim');
         Session::put('usuario', $usuario->usuario);
 
+        if(isset($_POST['lembrar'])){
+            setcookie('lembrar', true, time()+(60*60*24), '/');
+            setcookie('usuario', $usuario->usuario, time()+(60*60*24), '/');
+            setcookie('senha', $usuario->senha, time()+(60*60*24), '/');
+        }
+
         return redirect('/');
     }
 
@@ -146,6 +152,7 @@ class homeController extends Controller
     {
         //destruir sessão e redirect
         Session::flush();
+        setcookie('lembrar', 'true', time()-1, '/');
         return redirect('/');
     }
 
