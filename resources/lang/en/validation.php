@@ -178,5 +178,10 @@ return [
         'year'                  => 'ano',
         'email'                 => 'e-mail',
         'remember'              => 'lembrar-me',
+
+        'text_usuario'              => 'Usuário',
+        'text_senha'              => 'Senha',
+        'text_senha_repetida'              => 'Repetir Senha',
+        'text_email'              => 'Email',
     ],
 ];

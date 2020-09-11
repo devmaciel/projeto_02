@@ -17,13 +17,24 @@ use Illuminate\Support\Facades\Route;
 //INDEX
 Route::get('/', 'homeController@index')->name('index');
 
+
 //------------------------------------------------------
 // Usuário - Login
 Route::get('/login', 'homeController@pgLogin')
- ->name('usuario_form_login');
+    ->name('usuario_form_login');
 
 Route::post('/efetuar-login', 'homeController@executarLogin')
-->name('usuario_form_executar-login');
+    ->name('usuario_form_executar-login');
+
+
+//---------------------------------------------------------
+// Usuário - Nova Conta
+Route::get('/nova-conta', 'homeController@formCriarNovaConta')
+    ->name('usuario_criar_nova_conta');
+
+ Route::post('/efetuar-nova-conta', 'homeController@executarCriacaoDeNovaConta')
+    ->name('usuario_executar_criar_nova_conta');
+
 
 //---------------------------------------------------------
 // Usuário - Logout

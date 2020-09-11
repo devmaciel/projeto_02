@@ -1,6 +1,6 @@
 {{-- Erros de Validação--}}
 @if (count($errors) > 0)
-    <div class="alert alert-danger">
+    <div class="alert alert-danger alertBox">
         @if (count($errors) == 1)
             <p class="titulo-erro">ERRO:</p>
         @else
@@ -16,7 +16,7 @@
 
 {{-- Erros de Comunicação com Banco de Dados--}}
 @if (isset($erros_bd))
-    <div class="alert alert-danger">
+    <div class="alert alert-danger alertBox">
         @foreach ($erros_bd as $erro)
             <p>{{ $erro }}</p>
         @endforeach

@@ -125,6 +125,64 @@ form .form-group-login:nth-of-type(2){
 	top: 10px;
 } */
 
+.condicoes label{
+    color: #ffffff !important;
+}
+
+.breadCriar{
+    margin-top: 25px;
+}
+
+.breadCriar a{
+    color: white;
+}
+
+.breadCriar a:hover{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.criar_nova_conta{
+    margin-top: 15px;
+}
+
+.criar_nova_conta p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.criar_nova_conta a{
+    color:white;
+    font-weight: bold;
+}
+
+.criar_nova_conta a:hover{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.alertBox{
+    text-align: center;
+}
+
+.alertBox p,
+.alertBox li{
+    margin-bottom:2px;
+}
+
+.titulo-erro,
+.titulo-sucesso{
+    font-weight: bold;
+}
+
+.errosBox ul{
+    list-style-type: none;
+}
+
+.errosBox li{
+    padding: 5px;
+}
+
 /* footer */
 footer{
     margin-top: 0 !important;
