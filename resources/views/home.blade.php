@@ -1,5 +1,6 @@
 @include('templates/headerLogado')
 @extends('layouts.app')
+<body>
 
 @section('conteudo')
 

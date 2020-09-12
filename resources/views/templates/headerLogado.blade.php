@@ -34,8 +34,8 @@
                 </div>
             </div>
 
-            <div class="img-wraper"><img src="{{ asset('images/edith.jpg') }}" alt="Imagem do Usuário"></div>
-            <p>João Pedro Maciel</p>
+            <div class="img-wraper"><img src="{{ asset('images/uploads/'.session('imagem')) }}" alt="Imagem do Usuário"></div>
+            <p>{{ session('nome') }}</p>
 
         </li>
 

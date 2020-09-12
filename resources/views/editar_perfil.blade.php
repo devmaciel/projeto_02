@@ -1,14 +1,11 @@
-@php
-    use App\Models\usuarios; //usuarios model
-@endphp
-
 @extends('layouts.app')
+<body class="body-editar">
 
 @section('conteudo')
 
-    <header>
+
         <a href="{{ asset('/') }}" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
-    </header>
+
 
     <div class="box">
         <h2>Editar Perfil</h2>
@@ -24,15 +21,41 @@
         <div class="box-usuario">
 
 
-            <div class="avatar-usuario">
-                <i class="fas fa-user"></i>
-            </div>
+            @if (session('imagem') == '')
 
-            <input type="file" name="text_imagem" id="id_text_imagem" required>
+                <div class="avatar-usuario">
+                    <i class="fas fa-user"></i>
+                </div>
 
-            <div class="inputBoxImage">
+                <div class="inputBox">
+                    <input type="text" name="text_nome" id="id_text_nome" required>
+                    <label for="text_nome">Nome</label>
+                </div>
 
-            </div>
+                <div class="inputBoxImagem">
+                    <label for="text_imagem">Imagem</label>
+                    <input type="file" name="text_imagem" id="id_text_imagem" required>
+                </div>
+
+            @endif
+
+            @if (session('imagem') != '')
+
+                <div class="imagem-usuario">
+                    <img src="{{ asset('images/uploads/'.session('imagem')) }}" alt="imagem do usuário">
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" name="text_nome" id="id_text_nome" value="{{ session('nome') }}" required>
+                    <label for="text_nome">Nome</label>
+                </div>
+
+                <div class="inputBoxImagem">
+                    <input type="file" name="text_imagem" id="id_text_imagem" required>
+                </div>
+
+            @endif
+
 
 
             {{-- <div class="imagem-usuario">
@@ -44,12 +67,6 @@
             </div> --}}
 
 
-        </div>
-
-
-        <div class="inputBox">
-            <input type="text" name="text_nome" id="id_text_nome" required>
-            <label for="text_nome">Nome</label>
         </div>
 
 
@@ -66,7 +83,6 @@
 
     </div>
 </div>
-
 
 @endsection
 

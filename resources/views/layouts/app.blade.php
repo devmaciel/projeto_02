@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/270632f1ff.js" crossorigin="anonymous"></script>
 
   </head>
-  <body>
+  {{-- <body> --}}
 
   {{-- header --}}
   {{-- @include('templates.headerLogado') --}}

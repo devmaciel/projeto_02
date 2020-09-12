@@ -34,8 +34,31 @@ header{
     background-color:rgb(2, 3, 3);
 }
 
-.clearfix{clear: both;}
+.body-editar{
+    background: rgb(88,88,88) !important;
+    background: radial-gradient(circle, rgba(88,88,88,1) 0%, rgba(0,0,0,1) 70%) !important;
+}
 
+.clearfix{clear: both;}
+.alertBox{
+    text-align: center;
+}
+
+.alertBox p,
+.alertBox li{
+    margin-bottom:2px;
+}
+
+.errosBox ul,
+.alertBox ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+.errosBox li,
+.alertBox li{
+    padding: 5px;
+}
 
 .mobile-menu-wrapper{
     position: relative;
@@ -87,8 +110,8 @@ nav.mobile-menu ul li a{
 
 /* HEADER */
 .img-logo{
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     max-width: 150px;
     max-height: 100px;
 }
@@ -331,7 +354,7 @@ section.vitrine .vitrine-flex{
     top: calc(50% - 75px);
     left:50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 450px;
     padding: 40px;
     background:rgba(0,0,0,0.8);
     box-shadow: 0 15px 25px rgba(0,0,0,0.5);
@@ -442,7 +465,7 @@ div.box-usuario{
 	height: 130px;
 	position: relative;
 	border-radius: 50%;
-	border: 3px solid #2F3D42;
+    border: 3px solid #2F3D42;
 }
 
 .imagem-usuario img{
@@ -454,22 +477,18 @@ div.box-usuario{
 	border-radius: 50%;
 }
 
-.alertBox{
-    text-align: center;
+.inputBox{
+    margin-top: 30px;
 }
 
-.alertBox p,
-.alertBox li{
-    margin-bottom:2px;
+.inputBoxImagem{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
 }
 
-.errosBox ul,
-.alertBox ul{
-    list-style-type: none;
-    margin: 0;
+.inputBoxImagem label{
+    display: block;
+    text-align: left;
 }
 
-.errosBox li,
-.alertBox li{
-    padding: 5px;
-}

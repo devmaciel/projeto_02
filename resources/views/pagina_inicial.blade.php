@@ -1,8 +1,9 @@
 @extends('layouts.app')
-
+<body>
 {{-- FORMULÁRIO DE CRIAR CONTA --}}
 
 @section('conteudo')
+
 
     <link href="{{ asset('css/deslogado.css') }}" rel="stylesheet" />
 

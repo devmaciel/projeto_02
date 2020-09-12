@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<body>
 {{-- FORMULÁRIO DE LOGIN --}}
 
 @section('conteudo')
