@@ -9,7 +9,7 @@
     <div style="background-image: url('{{ asset('images/bgjaoflix.png') }}');" class="container_login">
 
         <header>
-            <a href="" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
+            <a href="{{ asset('/') }}" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
         </header>
 
         <div class="box">
@@ -26,6 +26,11 @@
             <div class="inputBox">
                 <input type="text" name="text_usuario" id="id_text_usuario" required>
                 <label for="text_usuario">Usuário</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="text_nome" id="id_text_nome" required>
+                <label for="text_nome">Nome</label>
             </div>
 
             <div class="inputBox">
@@ -64,5 +69,7 @@
         </div>
     </div>
 
-
+@include('templates.footer')
 @endsection
+
+

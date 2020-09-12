@@ -1,6 +1,6 @@
 <header>
     <ul class="nav nav-desktop">
-        <a href="" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
+        <a href="{{ asset('/') }}" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
 
         <li class="nav-item">
             <a class="nav-link" href="#">Inicio</a>
@@ -29,7 +29,7 @@
                 <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Sua Lista</a>
-                    <a class="dropdown-item" href="#">Editar Perfil</a>
+                    <a class="dropdown-item" href="{{ asset('editar_perfil') }}">Editar Perfil</a>
                     <a class="dropdown-item" href="{{ asset('usuario_logout') }}">Sair</a>
                 </div>
             </div>

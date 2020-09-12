@@ -9,7 +9,7 @@
     <div style="background-image: url('{{ asset('images/bgjaoflix.png') }}');" class="container_login">
 
         <header>
-            <a href="" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
+            <a href="{{ asset('/') }}" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
         </header>
 
         <div class="box">
@@ -49,5 +49,7 @@
         </div>
     </div>
 
-
+@include('templates.footer')
 @endsection
+
+

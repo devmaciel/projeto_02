@@ -323,3 +323,153 @@ section.vitrine .vitrine-flex{
     position: relative;
     top:-15px;
 }
+
+
+/* EDITAR PERFIL */
+.box{
+    position: relative;
+    top: calc(50% - 75px);
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background:rgba(0,0,0,0.8);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.box h2{
+    margin:0 0 30px;
+    padding: 0;
+    color:#ffffff;
+    text-align: center;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left:0;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+    top: -18px;
+    left:0;
+    color:#E50914;
+    font-size: 12px;
+}
+
+.box input[type="submit"]{
+    background:transparent;
+    border:none;
+    outline: none;
+    color:#ffffff;
+    background:#E50914;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.breadCriar{
+    margin-top: 25px;
+}
+
+.breadCriar a{
+    color: white;
+}
+
+.breadCriar a:hover{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+div.box-usuario{
+	padding: 8px;
+	text-align: center;
+}
+
+.avatar-usuario{
+	text-align: left;
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 3px solid #2F3D42;
+}
+
+.avatar-usuario input[type=file]{
+    margin-top: 30px;
+    color: white;
+}
+
+
+.avatar-usuario i{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	font-size: 50px;
+	color: #2F3D42;
+}
+
+.imagem-usuario{
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	position: relative;
+	border-radius: 50%;
+	border: 3px solid #2F3D42;
+}
+
+.imagem-usuario img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.alertBox{
+    text-align: center;
+}
+
+.alertBox p,
+.alertBox li{
+    margin-bottom:2px;
+}
+
+.errosBox ul,
+.alertBox ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+.errosBox li,
+.alertBox li{
+    padding: 5px;
+}

@@ -166,5 +166,6 @@
 
 	</script>
 
-
+@include('templates.footer')
 @endsection
+

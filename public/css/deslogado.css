@@ -175,11 +175,14 @@ form .form-group-login:nth-of-type(2){
     font-weight: bold;
 }
 
-.errosBox ul{
+.errosBox ul,
+.alertBox ul{
     list-style-type: none;
+    margin: 0;
 }
 
-.errosBox li{
+.errosBox li,
+.alertBox li{
     padding: 5px;
 }
 

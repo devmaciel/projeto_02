@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use App\Models\usuarios; //usuarios model
 use Session;
 
@@ -69,7 +70,11 @@ class homeController extends Controller
         // Session::put('chave', 'validado');
         // Session::put('usuario',$usuario->usuario);
         Session::put('login', 'sim');
+        Session::put('id_usuario', $usuario->id_usuario);
         Session::put('usuario', $usuario->usuario);
+        Session::put('nome', $usuario->nome);
+        Session::put('imagem', $usuario->imagem);
+        Session::put('email', $usuario->email);
 
         if(isset($_POST['lembrar'])){
             setcookie('lembrar', true, time()+(60*60*24), '/');
@@ -137,6 +142,8 @@ class homeController extends Controller
         $novo->usuario = $request->text_usuario;
         $novo->senha = Hash::make($request->text_senha);
         $novo->email = $request->text_email;
+        $novo->nome = $request->text_nome;
+        $novo->imagem = '';
         $novo->save();
 
         $mensagem_sucesso = ['Conta criada com sucesso!'];
@@ -145,6 +152,49 @@ class homeController extends Controller
         // return redirect('/');
 
     }
+
+    //============================================================
+    // Usuário - Editar Perfil
+    public function editarPerfil()
+    {
+        return view('editar_perfil');
+    }
+
+    public function efetuarEditarPerfil(Request $request)
+    {
+
+        //Nome
+        $usuario = session('id_usuario');
+        $usuariodb = usuarios::find($usuario);
+        $usuariodb->nome = $request->text_nome;
+        // dd($usuariodb->nome);
+
+        //Imagem
+        $this->validate($request, [
+            'text_imagem' => 'dimensions:min_width=100,min_height=200
+                                |dimensions:max_width=1000,max_height=500
+                                |mimes:jpeg,png,jpg'
+        ]);
+
+
+        //Deletar a última
+        if($usuariodb->imagem != ''){
+            unlink(public_path('/images/uploads/'.$usuariodb->imagem));
+            $usuariodb->imagem = '';
+        }
+
+        $uploadFile = $request->file('text_imagem');
+        $fileName = uniqid().'.'.$uploadFile->extension();
+        $uploadFile->storeAs('/', $fileName, 'uploads');
+        $usuariodb->imagem = $fileName;
+
+        $usuariodb->save();
+
+        $mensagem_sucesso = ['Editado com Sucesso!'];
+        return view('editar_perfil', compact('mensagem_sucesso'));
+
+    }
+
 
     //============================================================
     // LOGOUT

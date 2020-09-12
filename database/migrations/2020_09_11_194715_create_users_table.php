@@ -10,14 +10,17 @@ class CreateUsersTable extends Migration
     //======================================
     public function up()
     {
+        // TODO: NOME E IMAGEM ISADMIN(pro crud)
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id_usuario');
 
             $table->string('usuario');
             $table->string('senha');
+            $table->string('nome');
+            $table->string('imagem'); //php artisan storage:link
             $table->string('email');
 
-            $table->rememberToken();
+            // $table->rememberToken();
             $table->timestamps();
         });
     }
