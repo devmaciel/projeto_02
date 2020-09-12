@@ -179,9 +179,12 @@ return [
         'email'                 => 'e-mail',
         'remember'              => 'lembrar-me',
 
-        'text_usuario'              => 'Usuário',
-        'text_senha'              => 'Senha',
-        'text_senha_repetida'              => 'Repetir Senha',
-        'text_email'              => 'Email',
+        'text_usuario'           => 'Usuário',
+        'text_senha'             => 'Senha',
+        'text_senha_repetida'    => 'Repetir Senha',
+        'text_email'             => 'Email',
+        'text_imagem'            => 'Imagem',
+        'lembrar'                => 'Lembre-se de mim',
+        'check_termos_condicoes' => 'Termos de Uso',
     ],
 ];

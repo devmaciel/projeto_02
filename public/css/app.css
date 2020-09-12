@@ -443,6 +443,10 @@ div.box-usuario{
 	border: 3px solid #2F3D42;
 }
 
+.avatar-usuario-header i{
+    /*  */
+}
+
 .avatar-usuario input[type=file]{
     margin-top: 30px;
     color: white;

@@ -34,7 +34,15 @@
                 </div>
             </div>
 
-            <div class="img-wraper"><img src="{{ asset('images/uploads/'.session('imagem')) }}" alt="Imagem do Usuário"></div>
+            @if (session('imagem') == '')
+                <div class="img-wraper">
+                    <div class="avatar-usuario-header">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            @else
+                <div class="img-wraper"><img src="{{ asset('images/uploads/'.session('imagem')) }}" alt="Imagem do Usuário"></div>
+            @endif
             <p>{{ session('nome') }}</p>
 
         </li>

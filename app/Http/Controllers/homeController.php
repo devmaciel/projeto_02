@@ -172,7 +172,7 @@ class homeController extends Controller
         //Imagem
         $this->validate($request, [
             'text_imagem' => 'dimensions:min_width=100,min_height=200
-                                |dimensions:max_width=1000,max_height=500
+                                |dimensions:max_width=1200,max_height=1200
                                 |mimes:jpeg,png,jpg'
         ]);
 
@@ -189,6 +189,9 @@ class homeController extends Controller
         $usuariodb->imagem = $fileName;
 
         $usuariodb->save();
+
+        Session::put('imagem', $usuariodb->imagem);
+        Session::put('nome', $usuariodb->nome);
 
         $mensagem_sucesso = ['Editado com Sucesso!'];
         return view('editar_perfil', compact('mensagem_sucesso'));

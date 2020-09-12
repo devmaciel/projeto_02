@@ -56,17 +56,6 @@
 
             @endif
 
-
-
-            {{-- <div class="imagem-usuario">
-                <img src="" alt="imagem do usuário">
-            </div>
-
-            <div class="inputBoxImage">
-                <input type="file" name="text_imagem" id="id_text_imagem" required>
-            </div> --}}
-
-
         </div>
 
 
