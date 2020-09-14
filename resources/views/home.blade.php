@@ -153,7 +153,11 @@
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3
-                }
+                },
+				breakpoint: 370,
+				settings: {
+					slidesToShow: 2
+				},
             }]
 	    });
 

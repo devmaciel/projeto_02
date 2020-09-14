@@ -37,12 +37,19 @@ Route::get('/nova-conta', 'homeController@formCriarNovaConta')
 
 
 //---------------------------------------------------------
-// Usuário - Nova Conta
+// Usuário - Editar Perfil
 Route::get('/editar_perfil', 'homeController@editarPerfil')
     ->name('usuario_editar_perfil');
 
 Route::post('/efetuar-editar_perfil', 'homeController@efetuarEditarPerfil')
 ->name('usuario_efetuar_editar_perfil');
+
+//---------------------------------------------------------
+// Usuário - Administrador
+Route::get('/painel_admin', 'homeController@painelAdmin')
+    ->name('usuario_painel_admin');
+
+
 
 //---------------------------------------------------------
 // Usuário - Logout

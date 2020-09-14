@@ -225,6 +225,10 @@ section.banner{
 	background-color: rgba(0,0,0,0.3);
 }
 
+.nome_admin{
+    color: gold !important;
+}
+
 .texto-destaque{
 	color: white;
 	z-index: 3;

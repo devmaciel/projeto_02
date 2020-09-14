@@ -75,6 +75,7 @@ class homeController extends Controller
         Session::put('nome', $usuario->nome);
         Session::put('imagem', $usuario->imagem);
         Session::put('email', $usuario->email);
+        Session::put('isAdmin', $usuario->isAdmin);
 
         if(isset($_POST['lembrar'])){
             setcookie('lembrar', true, time()+(60*60*24), '/');
@@ -106,7 +107,7 @@ class homeController extends Controller
         //==================================================
         $this->validate($request, [
             'text_usuario' => 'required|between:3,30|alpha_num',
-            'text_senha' => 'required|between:6,50',
+            'text_senha' => 'required|between:5,50',
             'text_senha_repetida' => 'required|same:text_senha',
             'text_email' => 'required|email',
             'check_termos_condicoes' => 'accepted'
@@ -144,6 +145,7 @@ class homeController extends Controller
         $novo->email = $request->text_email;
         $novo->nome = $request->text_nome;
         $novo->imagem = '';
+        $novo->isAdmin = '0';
         $novo->save();
 
         $mensagem_sucesso = ['Conta criada com sucesso!'];
@@ -200,12 +202,24 @@ class homeController extends Controller
 
 
     //============================================================
+    // Usuário - Painel Admin
+    public function painelAdmin()
+    {
+        return view('painel_admin');
+    }
+
+
+    //============================================================
     // LOGOUT
     public function logout()
     {
         //destruir sessão e redirect
         Session::flush();
+
         setcookie('lembrar', 'true', time()-1, '/');
+        setcookie('usuario', 'true', time()-1, '/');
+        setcookie('senha', 'true', time()-1, '/');
+
         return redirect('/');
     }
 

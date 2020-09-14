@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="inputBox">
-                    <input type="text" name="text_nome" id="id_text_nome" required>
+                    <input type="text" name="text_nome" id="id_text_nome" value="{{ session('nome') }}" required>
                     <label for="text_nome">Nome</label>
                 </div>
 

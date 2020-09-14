@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('nome');
             $table->string('imagem'); //php artisan storage:link
             $table->string('email');
+            $table->string('isAdmin')->default(0); //0:nao , 1:sim
 
             // $table->rememberToken();
             $table->timestamps();
