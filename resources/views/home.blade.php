@@ -17,7 +17,7 @@
         <div class="texto-destaque">
 			<h2>Kingdom Hearts III</h2>
 			<h3>Trailer de lançamento pra plataforma PC(steam)</h3>
-			<p>Imagina se fosse verdade, seria um sonho.</p>
+			<p>Imagina se fosse verdade, seria muito bom.</p>
 			<br />
 			<a href="#"><i class="fas fa-play"></i> Assistir</a>
 			<a href="#"><i class="fab fa-steam"></i> Comprar</a>

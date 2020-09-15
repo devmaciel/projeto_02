@@ -208,6 +208,16 @@ class homeController extends Controller
         return view('painel_admin');
     }
 
+    public function painelAdminAdicionar()
+    {
+        return view('painel_admin_adicionar');
+    }
+
+    public function painelAdminEditar()
+    {
+        return view('painel_admin_editar');
+    }
+
 
     //============================================================
     // LOGOUT

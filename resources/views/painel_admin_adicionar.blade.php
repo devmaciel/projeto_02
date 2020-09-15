@@ -2,7 +2,7 @@
 
 @section('conteudoPainel')
 
-    <h1>Conteudo do Painel</h1>
+    <h1>Conteudo de Adicionar Video</h1>
 
 @endsection
 

@@ -500,3 +500,56 @@ div.box-usuario{
     text-align: left;
 }
 
+/* PAINEL */
+.navPainel{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #222222;
+    opacity: .9;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+}
+
+.navPainel a{
+    display: block;
+    padding: 20px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navPainel a:hover, .slidePainel a:hover{
+    color: #E50914;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.navPainel .closePainel{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.slidePainel a {
+    color: #fff;
+    font-size: 36px;
+}
+
+#content{
+    padding: 20px;
+    transition: margin-left 0.7s;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contentPainel h1{
+    color: white;
+    text-align: center;
+}
