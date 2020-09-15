@@ -19,9 +19,9 @@
 			<h3>Trailer de lançamento pra plataforma PC(steam)</h3>
 			<p>Imagina se fosse verdade, seria muito bom.</p>
 			<br />
-			<a href="#"><i class="fas fa-play"></i> Assistir</a>
-			<a href="#"><i class="fab fa-steam"></i> Comprar</a>
-			<a href="#"><i class="fas fa-globe-americas"></i> Site</a>
+			<a href="https://youtu.be/2VawSnaxtSI"><i class="fas fa-play"></i> Assistir</a>
+			<a href="https://store.steampowered.com/"><i class="fab fa-steam"></i> Comprar</a>
+			<a href="https://www.kingdomhearts.com/home/gb/"><i class="fas fa-globe-americas"></i> Site</a>
 		</div>
 
 

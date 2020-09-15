@@ -19,6 +19,7 @@
             <a href="{{ route('usuario_painel_admin') }}">Home</a>
             <a href="{{ route('usuario_painel_admin_adicionar') }}">Adicionar Videos</a>
             <a href="{{ route('usuario_painel_admin_editar') }}">Editar Videos</a>
+            <a href="{{ route('index') }}">Voltar para o site</a>
 
         </div>
 
