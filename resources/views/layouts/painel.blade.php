@@ -2,7 +2,6 @@
 
 @section('conteudo')
 
-
     <div id="content">
 
         <span class="slidePainel">

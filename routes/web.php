@@ -52,6 +52,9 @@ Route::get('/painel_admin', 'painelController@painelAdmin')
 Route::get('/painel_admin_adicionar', 'painelController@painelAdminAdicionar')
     ->name('usuario_painel_admin_adicionar');
 
+Route::post('/painel_admin_adicionar', 'painelController@painelAdminEfetuarAdicionar')
+    ->name('usuario_painel_admin_efetuar_adicionar');
+
 Route::get('/painel_admin_editar', 'painelController@painelAdminEditar')
     ->name('usuario_painel_admin_editar');
 

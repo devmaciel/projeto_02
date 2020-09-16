@@ -29,6 +29,11 @@ class painelController extends Controller
         }
     }
 
+    public function painelAdminEfetuarAdicionar()
+    {
+        return 'OK';
+    }
+
 
     public function painelAdminEditar()
     {
