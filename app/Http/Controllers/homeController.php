@@ -69,7 +69,7 @@ class homeController extends Controller
         //session
         // Session::put('chave', 'validado');
         // Session::put('usuario',$usuario->usuario);
-        Session::put('login', 'sim');
+        Session::put('login', true);
         Session::put('id_usuario', $usuario->id_usuario);
         Session::put('usuario', $usuario->usuario);
         Session::put('nome', $usuario->nome);
@@ -198,24 +198,6 @@ class homeController extends Controller
         $mensagem_sucesso = ['Editado com Sucesso!'];
         return view('editar_perfil', compact('mensagem_sucesso'));
 
-    }
-
-
-    //============================================================
-    // Usuário - Painel Admin
-    public function painelAdmin()
-    {
-        return view('painel_admin');
-    }
-
-    public function painelAdminAdicionar()
-    {
-        return view('painel_admin_adicionar');
-    }
-
-    public function painelAdminEditar()
-    {
-        return view('painel_admin_editar');
     }
 
 

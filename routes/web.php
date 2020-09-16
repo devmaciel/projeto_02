@@ -46,13 +46,13 @@ Route::post('/efetuar-editar_perfil', 'homeController@efetuarEditarPerfil')
 
 //---------------------------------------------------------
 // Usuário - Administrador
-Route::get('/painel_admin', 'homeController@painelAdmin')
+Route::get('/painel_admin', 'painelController@painelAdmin')
     ->name('usuario_painel_admin');
 
-Route::get('/painel_admin_adicionar', 'homeController@painelAdminAdicionar')
+Route::get('/painel_admin_adicionar', 'painelController@painelAdminAdicionar')
     ->name('usuario_painel_admin_adicionar');
 
-Route::get('/painel_admin_editar', 'homeController@painelAdminEditar')
+Route::get('/painel_admin_editar', 'painelController@painelAdminEditar')
     ->name('usuario_painel_admin_editar');
 
 
