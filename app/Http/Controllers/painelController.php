@@ -44,7 +44,7 @@ class painelController extends Controller
 
             'painel_text_imagem' => 'required
                                     |dimensions:min_width=100,min_height=200
-                                    |dimensions:max_width=1200,max_height=1200
+                                    |dimensions:max_width=1500,max_height=1200
                                     |mimes:jpeg,png,jpg',
             'painel_text_video' => 'required'
 
@@ -85,11 +85,21 @@ class painelController extends Controller
 
     }
 
+    public function painelAdminMostrar()
+    {
+        $videoTable = videos::orderBy('id_video')->get();
+        return view('painel_admin_mostrar', compact('videoTable'));
+    }
+
 
     public function painelAdminEditar()
     {
+        //TODO
         if ( session('login') && session('isAdmin') == '1'){
-            return view('painel_admin_editar');
+            // $categories = categories::orderBy('id_categoria')->get();
+            // $videoTable = videos::orderBy('id_video')->get()->first();
+            // return view('painel_admin_editar', compact('categories'), compact('videoTable'));
+            return 'OK';
         }else{
             return redirect()->route('index');
         }
@@ -97,6 +107,7 @@ class painelController extends Controller
 
     public function painelAdminEfetuarEditar()
     {
+        //TODO
         return 'OK';
     }
 

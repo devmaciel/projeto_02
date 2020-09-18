@@ -579,3 +579,22 @@ div.box-usuario{
     padding: 5px;
     height: 100px;
 }
+
+.painelLista{
+    overflow-x: scroll !important;
+}
+
+.painelLista a{
+    text-decoration: none;
+}
+
+.painelLista i{
+   cursor: pointer;
+   margin-top: 3px;
+}
+
+.painelLista i:hover{
+    opacity: 0.8;
+ }
+
+
