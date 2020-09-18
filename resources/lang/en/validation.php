@@ -186,5 +186,10 @@ return [
         'text_imagem'            => 'Imagem',
         'lembrar'                => 'Lembre-se de mim',
         'check_termos_condicoes' => 'Termos de Uso',
+        'painel_text_titulo' => 'Título',
+        'painel_text_descricao' => 'Descrição',
+        'painel_categoria' => 'Categoria',
+        'painel_text_imagem' => 'Imagem',
+        'painel_text_video' => 'Video',
     ],
 ];

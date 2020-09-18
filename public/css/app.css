@@ -553,3 +553,29 @@ div.box-usuario{
     color: white;
     text-align: center;
 }
+
+.boxTextArea{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.boxTextArea label{
+    position: relative;
+    display: block;
+    color: white;
+}
+
+.boxTextArea textarea{
+    resize: vertical;
+    width: 100%;
+    padding: 5px;
+    height: 100px;
+}

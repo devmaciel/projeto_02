@@ -1,3 +1,8 @@
+@php
+    // $categories = categories::all()->get();
+    // dd($categories->nome);
+@endphp
+
 @extends('layouts.painel')
 <body class="body-editar">
 
@@ -9,10 +14,11 @@
     <h1>Adicionar Video</h1>
 
     {{-- VALIDAÇÃO DE ERROS --}}
+    <br>
     @include('templates/erros')
     @include('templates/sucesso')
 
-    <form method="POST" action="{{ route('usuario_painel_admin_efetuar_adicionar') }}" autocomplete="off">
+    <form method="POST" action="{{ route('usuario_painel_admin_efetuar_adicionar') }}" autocomplete="off" enctype="multipart/form-data">
         @csrf
 
         <div class="inputBox">
@@ -20,18 +26,17 @@
             <label for="painel_text_titulo">Título</label>
         </div>
 
-        <div class="inputBox">
-            <input type="text" name="painel_text_descricao" id="id_painel_text_descricao" required>
+        <div class="boxTextArea">
             <label for="painel_text_descricao">Descrição</label>
+            <textarea name="painel_text_descricao" id="id_painel_text_descricao" required></textarea>
         </div>
 
         <div class="inputBox">
             <label style="position: relative;top:-30px;" for="painel_categoria_id">Categorias</label>
-            <select style="position: relative;left:-88px;top:4px;" name="painel_categoria_id">
-                <option value="id1">Exclusivo</option>
-                <option value="id2">Filme</option>
-                <option value="id3">Série</option>
-                <option value="id4">Infantil</option>
+            <select style="position: relative;left:-88px;top:4px;" name="painel_categoria">
+                @foreach ($categories as $categorie)
+                    <option value="{{ $categorie->id_categoria }}">{{ $categorie->nome }}</option>
+                @endforeach
             </select>
         </div>
 
@@ -40,9 +45,14 @@
             <input type="file" name="painel_text_imagem" id="id_painel_text_imagem" required>
         </div>
 
-        <div class="inputBoxImagem">
+        {{-- <div class="inputBoxImagem">
             <label for="painel_text_video">Video</label>
             <input type="file" accept="video/mp4,video/x-m4v,video/*" name="painel_text_video" id="id_painel_text_video" required>
+        </div> --}}
+
+        <div class="inputBox">
+            <input type="text" name="painel_text_video" id="id_painel_text_video" required>
+            <label for="painel_text_video">Video URL</label>
         </div>
 
 

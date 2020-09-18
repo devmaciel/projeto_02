@@ -72,6 +72,13 @@ return [
             'visibility' => 'public',
         ],
 
+        // 'videoUploads' => [
+        //     'driver' => 'local',
+        //     'root' => public_path('videos/uploads'),
+        //     'url' => '/videos/uploads',
+        //     'visibility' => 'public',
+        // ],
+
     ],
 
 

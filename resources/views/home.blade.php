@@ -132,6 +132,37 @@
             </div>
             <div class="clearfix"></div>
 	    </div>	<!--vitrine-flex-->
+	</section>
+
+	<section class="vitrine">
+        <h3 class="carousel-title">Infantil</h3>
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+				<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
+			</div>
+            <div class="clearfix"></div>
+	    </div>	<!--vitrine-flex-->
     </section>
 
     <script src="{{ asset('js/jquery.js') }}"></script>
