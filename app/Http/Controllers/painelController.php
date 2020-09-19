@@ -92,23 +92,71 @@ class painelController extends Controller
     }
 
 
-    public function painelAdminEditar()
+    public function painelAdminEditar(Request $request, $id)
     {
-        //TODO
         if ( session('login') && session('isAdmin') == '1'){
             // $categories = categories::orderBy('id_categoria')->get();
             // $videoTable = videos::orderBy('id_video')->get()->first();
-            // return view('painel_admin_editar', compact('categories'), compact('videoTable'));
-            return 'OK';
+            $categories = categories::get();
+            $id = videos::find($id);
+            return view('painel_admin_editar', compact('categories'), compact('id'));
         }else{
             return redirect()->route('index');
         }
     }
 
-    public function painelAdminEfetuarEditar()
+    public function painelAdminEfetuarEditar(Request $request, $id)
     {
-        //TODO
-        return 'OK';
+
+        $categories = categories::get();
+        $video = videos::find($id);
+        // dd($id);
+
+        //VALIDAÇÃO
+        $this->validate($request, [
+            'painel_text_titulo' => '',
+            'painel_text_descricao' => '',
+            'painel_categoria' => '',
+
+            //TODO: BUGADO
+            // 'painel_text_imagem' => '
+            //                         dimensions:min_width=100,min_height=200
+            //                         |dimensions:max_width=1500,max_height=1200
+            //                         |mimes:jpeg,png,jpg',
+
+            'painel_text_video' => ''
+        ]);
+
+        //SALVAR NO BANCO
+        $params = request()->except('_token');
+        $video->titulo = $params['painel_text_titulo'];
+        $video->descricao = $params['painel_text_descricao'];
+        $video->imagem_capa = $video->imagem_capa;
+        $video->categoria_id = $params['painel_categoria'];
+        $video->video = $params['painel_text_video'];
+        // dd($video->imagem_capa);
+
+        //IMAGEM
+        if($request->hasFile('painel_text_imagem')) {
+            if($video->imagem_capa != ''){
+                unlink(public_path('/images/uploads/'.$video->imagem));
+                $video->imagem = '';
+            }
+
+            $uploadFile = $request->file('painel_text_imagem');
+            $fileName = uniqid().'.'.$uploadFile->extension();
+            $uploadFile->storeAs('/', $fileName, 'uploads');
+            $video->imagem_capa = $fileName;
+        }
+
+        $video->update();
+
+        //TODO: ID VOLTA VAZIO, BUGADO
+
+        $mensagem_sucesso = ['Video editado com sucesso!'];
+
+        return view('painel_admin_editar', compact('mensagem_sucesso'), compact('categories'), compact('id'));
+
     }
 
 

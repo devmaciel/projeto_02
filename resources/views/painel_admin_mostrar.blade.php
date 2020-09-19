@@ -24,7 +24,7 @@
             <th scope="row">{{ $item->id_video }}</th>
             <td>{{ $item->titulo }}</td>
             <td>{{ $item->descricao }}</td>
-            <td class="text-center"><a style="color:yellow;" href="#"><i class="fas fa-edit"></i> </a></td>
+            <td class="text-center"><a style="color:yellow;" href="{{ asset('painel_admin_editar').'/'.$item->id_video }}"><i class="fas fa-edit"></i> </a></td>
             <td class="text-center"><a style="color:red;" href="#"><i class="fas fa-trash"></i> </a></td>
 
           </tr>

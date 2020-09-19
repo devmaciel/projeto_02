@@ -61,10 +61,10 @@ Route::get('/painel_admin_mostrar', 'painelController@painelAdminMostrar')
 
 
 
-Route::get('/painel_admin_editar', 'painelController@painelAdminEditar')
+Route::get('/painel_admin_editar/{id}', 'painelController@painelAdminEditar')
     ->name('usuario_painel_admin_editar');
 
-Route::post('/painel_admin_editar', 'painelController@painelAdminEfetuarEditar')
+Route::post('/painel_admin_editar/{id}', 'painelController@painelAdminEfetuarEditar')
     ->name('usuario_painel_admin_efetuar_editar');
 
 
