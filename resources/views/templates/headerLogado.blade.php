@@ -3,19 +3,19 @@
         <a href="{{ asset('/') }}" ><img class="img-logo" src="{{ asset('images/jaoflix.jpg') }}" alt="logotipo"></a>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
+            <a class="nav-link" href="{{ route('index') }}">Inicio</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">Séries</a>
+            <a class="nav-link" href="#series">Séries</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">Filmes</a>
+            <a class="nav-link" href="#filmes">Filmes</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">Infantil</a>
+            <a class="nav-link" href="#infantil">Infantil</a>
         </li>
 
         <li>
@@ -31,7 +31,6 @@
                     @if (session('isAdmin') == 1)
                         <a class="dropdown-item" href="{{ asset('painel_admin') }}">Painel do Admin</a>
                     @endif
-                    <a class="dropdown-item" href="#">Sua Lista</a>
                     <a class="dropdown-item" href="{{ asset('editar_perfil') }}">Editar Perfil</a>
                     <a class="dropdown-item" href="{{ asset('usuario_logout') }}">Sair</a>
                 </div>
@@ -62,12 +61,14 @@
     <div class="mobile-menu-wrapper">
         <nav class="mobile-menu">
             <ul>
-                <li><a href="#servicos">Séries</a></li>
-                <li><a href="#sobre">Filmes</a></li>
-                <li><a href="#contato">Infantil</a></li>
-                <li><a href="#contato">Sua Lista</a></li>
-                <li><a href="#contato">Editar Perfil</a></li>
-                <li><a href="#contato">Sair</a></li>
+                @if (session('isAdmin') == 1)
+                <li><a class="dropdown-item" href="{{ asset('painel_admin') }}">Painel do Admin</a></li>
+                @endif
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#infatil">Infantil</a></li>
+                <li><a href="{{ asset('editar_perfil') }}">Editar Perfil</a></li>
+                <li><a href="{{ asset('usuario_logout') }}">Sair</a></li>
                 <li><a></a></li>
             </ul>
         </nav>

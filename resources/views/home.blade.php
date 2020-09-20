@@ -29,7 +29,7 @@
 
 
     {{-- CAROUSELS --}}
-    <section class="vitrine">
+    <section id="exclusivos" class="vitrine">
         <h3 class="carousel-title">Filmes e Séries <b>jaoflix</b> exclusivas</h3>
 		<div class="vitrine-flex">
             @foreach ($exclusivos as $exclusivo)
@@ -41,7 +41,7 @@
 	    </div>	<!--vitrine-flex-->
     </section>
 
-    <section class="vitrine">
+    <section id="filmes" class="vitrine">
         <h3 class="carousel-title">Filmes</h3>
 		<div class="vitrine-flex">
             @foreach ($filmes as $filme)
@@ -53,7 +53,7 @@
 	    </div>	<!--vitrine-flex-->
     </section>
 
-    <section class="vitrine">
+    <section id="series" class="vitrine">
         <h3 class="carousel-title">Séries</h3>
 		<div class="vitrine-flex">
             @foreach ($series as $serie)
@@ -65,7 +65,7 @@
 	    </div>	<!--vitrine-flex-->
 	</section>
 
-	<section class="vitrine">
+	<section id="infantil" class="vitrine">
         <h3 class="carousel-title">Infantil</h3>
 		<div class="vitrine-flex">
             @foreach ($infantils as $infantil)
@@ -87,7 +87,7 @@
             infinite: false,
             centerMode: false,
             speed:1000,
-            slidesToShow: 5,
+            slidesToShow: 4,
             autoplay: false,
             autoplaySpeed: 3000,
             pauseOnHover:false,
@@ -97,7 +97,7 @@
                 settings: {
                     slidesToShow: 3
                 },
-				breakpoint: 370,
+				breakpoint: 451,
 				settings: {
 					slidesToShow: 2
 				},

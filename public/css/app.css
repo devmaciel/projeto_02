@@ -11,8 +11,11 @@
 
 }
 
-html,body{
+html{
     scroll-behavior: smooth;
+}
+
+html,body{
     overflow-x: hidden;
     background:black !important;
     height: 100%;

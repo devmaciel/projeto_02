@@ -6,5 +6,6 @@ $(function(){
 		$('html,body').animate({
 			'scrollTop':offSetTop
 		})
-	})
+    })
+
 })
