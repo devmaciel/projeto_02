@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Models\usuarios; //usuarios model
+use App\Models\videos;
 use Session;
 
 class homeController extends Controller
@@ -15,10 +16,19 @@ class homeController extends Controller
     public function index()
     {
         //Sessão Inativa/Ativa
-        if(!Session::has('login'))
+        if(!Session::has('login')){
+
             return $this->pgLogin();
-        else
-            return view('home');
+
+        }else{
+
+            $exclusivos = videos::get()->where('categoria_id', '=', '1');
+            $filmes = videos::get()->where('categoria_id', '=', '2');
+            $series = videos::get()->where('categoria_id', '=', '3');
+            $infantils = videos::get()->where('categoria_id', '=', '4');
+            return view('home', compact('series', 'filmes', 'exclusivos', 'infantils'));
+        }
+
     }
 
     //===============================================

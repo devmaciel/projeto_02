@@ -59,13 +59,14 @@ Route::post('/painel_admin_adicionar', 'painelController@painelAdminEfetuarAdici
 Route::get('/painel_admin_mostrar', 'painelController@painelAdminMostrar')
     ->name('usuario_painel_admin_mostrar');
 
-
-
 Route::get('/painel_admin_editar/{id}', 'painelController@painelAdminEditar')
     ->name('usuario_painel_admin_editar');
 
 Route::post('/painel_admin_editar/{id}', 'painelController@painelAdminEfetuarEditar')
     ->name('usuario_painel_admin_efetuar_editar');
+
+Route::get('/painel_admin_deletar/{id}', 'painelController@painelAdminDeletar')
+    ->name('usuario_painel_admin_deletar');
 
 
 

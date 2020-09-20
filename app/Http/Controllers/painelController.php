@@ -159,5 +159,12 @@ class painelController extends Controller
 
     }
 
+    public function painelAdminDeletar($id)
+    {
+        $video = videos::find($id);
+        $video->delete();
+        return redirect()->route('usuario_painel_admin_mostrar');
+    }
+
 
 }

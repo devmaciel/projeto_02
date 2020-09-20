@@ -32,36 +32,11 @@
     <section class="vitrine">
         <h3 class="carousel-title">Filmes e Séries <b>jaoflix</b> exclusivas</h3>
 		<div class="vitrine-flex">
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-            </div>
-            <div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-            </div>
+            @foreach ($exclusivos as $exclusivo)
+                <div class="vitrine-single-banner">
+                    <div class="vitrine-wraper" style="background-image: url('images/uploads/<?= $exclusivo->imagem_capa ?>');"></div>
+                </div>
+            @endforeach
             <div class="clearfix"></div>
 	    </div>	<!--vitrine-flex-->
     </section>
@@ -69,30 +44,11 @@
     <section class="vitrine">
         <h3 class="carousel-title">Filmes</h3>
 		<div class="vitrine-flex">
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-				<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
+            @foreach ($filmes as $filme)
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url('images/uploads/<?= $filme->imagem_capa ?>');"></div>
+            </div>
+            @endforeach
             <div class="clearfix"></div>
 	    </div>	<!--vitrine-flex-->
     </section>
@@ -100,36 +56,11 @@
     <section class="vitrine">
         <h3 class="carousel-title">Séries</h3>
 		<div class="vitrine-flex">
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-            </div>
-            <div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-            </div>
+            @foreach ($series as $serie)
+                <div class="vitrine-single-banner">
+                    <div class="vitrine-wraper" style="background-image: url('images/uploads/<?= $serie->imagem_capa ?>');"></div>
+                </div>
+            @endforeach
             <div class="clearfix"></div>
 	    </div>	<!--vitrine-flex-->
 	</section>
@@ -137,30 +68,11 @@
 	<section class="vitrine">
         <h3 class="carousel-title">Infantil</h3>
 		<div class="vitrine-flex">
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-				<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/arrow.jpg');"></div>
-			</div>
-			<div class="vitrine-single-banner">
-				<div class="vitrine-wraper" style="background-image: url('images/suits.jpeg');"></div>
-			</div>
+            @foreach ($infantils as $infantil)
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url('images/uploads/<?= $infantil->imagem_capa ?>');"></div>
+            </div>
+            @endforeach
             <div class="clearfix"></div>
 	    </div>	<!--vitrine-flex-->
     </section>
