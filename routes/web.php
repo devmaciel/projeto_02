@@ -68,6 +68,9 @@ Route::post('/painel_admin_editar/{id}', 'painelController@painelAdminEfetuarEdi
 Route::get('/painel_admin_deletar/{id}', 'painelController@painelAdminDeletar')
     ->name('usuario_painel_admin_deletar');
 
+//busca
+Route::get('/busca', 'homeController@search')
+    ->name('usuario_busca');
 
 
 //---------------------------------------------------------

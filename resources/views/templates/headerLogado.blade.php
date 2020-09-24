@@ -19,8 +19,12 @@
         </li>
 
         <li>
-            <i class="fas fa-search"></i>
-            <input type="text" class="form-control" placeholder="Buscar">
+            <form class="form-search" action="{{ route('usuario_busca') }}" method="GET">
+                <span class="form-group-btn">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    <input type="search" name="search" class="form-control" placeholder="Buscar">
+                </span>
+            </form>
         </li>
 
         <li>
@@ -56,7 +60,6 @@
         </li>
 
     </ul>
-
 
     <div class="mobile-menu-wrapper">
         <nav class="mobile-menu">

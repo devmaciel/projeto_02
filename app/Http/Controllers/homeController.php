@@ -210,6 +210,13 @@ class homeController extends Controller
 
     }
 
+    //============================================================
+    // Search
+    public function search(Request $request){
+        $search = $request->get('search');
+        $posts = videos::where('titulo', 'like', '%'.$search.'%')->paginate(5);
+        return view('busca', ['posts' => $posts]);
+    }
 
     //============================================================
     // LOGOUT

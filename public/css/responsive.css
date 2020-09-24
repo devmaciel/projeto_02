@@ -1,5 +1,9 @@
 @media screen and (max-width: 1080px){
 
+    header{
+        padding: 0;
+    }
+
     nav.mobile-menu{
         display: inline-block;
         margin: 20px;
@@ -28,24 +32,36 @@
 
 }
 
-/* @media screen and (max-width: 565px){
+@media screen and (max-width: 565px){
 
-    .nav-desktop li:nth-of-type(5){
+    /* .nav-desktop li:nth-of-type(5){
+        display: none;
+    } */
+    .img-logo{
         display: none;
     }
-} */
-
-@media screen and (max-width: 514px){
 
     header li:nth-of-type(5){
         padding: 10px;
     }
+
+}
+
+@media screen and (max-width: 514px){
+
+    /* header li:nth-of-type(5){
+        padding: 10px;
+    } */
 }
 
 
 @media screen and (max-width: 410px){
     .banner a{
         display: none;
+    }
+    .box{
+        width: 300px;
+        top:270px;
     }
 }
 

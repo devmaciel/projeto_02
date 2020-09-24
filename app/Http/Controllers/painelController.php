@@ -155,7 +155,7 @@ class painelController extends Controller
 
         $mensagem_sucesso = ['Video editado com sucesso!'];
 
-        return view('painel_admin_editar', compact('mensagem_sucesso'), compact('categories'), compact('id'));
+        return view('painel_admin_editar', compact('mensagem_sucesso'), compact('categories'), ['id' => $id]);
 
     }
 
